@@ -1,8 +1,9 @@
 #include <iostream>
-#include <string>
-#include <fstream>
 #include <cstdlib>
 #include <climits>
+#include <string>
+#include <fstream>
+
 
 double get_east_storage(std::string date) {
     std::ifstream file("Current_Reservoir_Levels.tsv");
