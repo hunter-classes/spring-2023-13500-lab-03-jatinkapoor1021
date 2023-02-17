@@ -1,14 +1,7 @@
-# Starter Makefile
-# add .cpp and .h files as specified in each task. 
+all: main.cpp reservoir.cpp reservoir.h
 
-main: main.o reservoir.o
-	g++ -o main main.o reservoir.o
+g++ -std=c++11 -o main main.cpp reservoir.cpp
 
-main.o: main.cpp reservoir.h
-	g++ -c main.cpp
-
-reservoir.o: reservoir.cpp reservoir.h
-	g++ -c reservoir.cpp
 clean:
-	rm -f main.o reservoir.o
 
+rm -f main
