@@ -11,7 +11,7 @@
 
 int main()
 {
-  //TASK A
+
 double east_storage;
 
 std::string dates[] = {"01/05/2018", "03/10/2018", "05/20/2018",
@@ -28,20 +28,20 @@ std::cout << dates[i] << " East basin storage: " << east_storage << " billion ga
 
 }
 
-  //TASK B
+
 double min_east_storage = get_min_east();
 double max_east_storage = get_max_east();
 std::cout << "Minimum east storage: " << get_min_east()<< " billion gallons" << std::endl<<"\n";
 std::cout << "Maximum east storage: " << get_max_east() << " billion gallons" << std::endl<<"\n";
 
 
-  //TASK C
+
 std::cout << "The higher value in February 20 is the " << compare_basins("02/20/2018")<< std::endl<<"\n";
 std::cout << "The higher value in June 5 is the " << compare_basins("06/05/2018")<< std::endl<<"\n";
 std::cout << "The higher value in October 21 is the " << compare_basins("10/21/2018")<< std::endl<<"\n";
 
 
-//TASK D
+
 reverse_order("01/18/2018", "06/19/2018");
 reverse_order("08/05/2018", "12/24/2018");
 
