@@ -1,7 +1,14 @@
-all: main.cpp reservoir.cpp reservoir.h reverseorder.cpp reverseorder.h
+main: main.o reservoir.o reverseorder.o
+	g++ -o main main.o reservoir.o reverseorder.o
 
-g++ -std=c++11 -o main main.cpp reservoir.cpp reverseorder.cpp
+main.o: main.cpp reservoir.h reverseorder.h
+	g++ -c main.cpp
+
+reservoir.o: reservoir.cpp reservoir.h
+	g++ -c reservoir.cpp
+
+reverseorder.o: reverseorder.cpp reverseorder.h
+	g++ -c reverseorder.cpp
 
 clean:
-
-rm -f main
+	rm -f main.o reservoir.o reverseorder.o
